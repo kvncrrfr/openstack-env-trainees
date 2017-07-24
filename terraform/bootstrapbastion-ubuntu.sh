@@ -38,7 +38,7 @@ cd ~/scripts/install_terraform_packer
 chmod 755 install_terraform_packer.sh
 sudo ./install_terraform_packer.sh
 mkdir ~/repo
-git clone https://github.com/redbeard28/openstack-env-trainees.git ~/repo/ -b traineesv1
+git clone https://github.com/kvncrrfr/openstack-env-trainees.git ~/repo/ -b traineesv1
 cd ~/repo/ansible
 chmod 600 ~/.ssh/id_rsa
 #ansible-playbook -i 'localhost,' -c local playbooks/install-openldap.yml
@@ -48,5 +48,5 @@ chmod 600 ~/.ssh/id_rsa
 #ansible-playbook -i inventory/hosts playbooks/commons.yml
 #ansible-playbook -i 'localhost,' -c local playbooks/install-noip2.yml --tags trainees
 #ansible-playbook -i inventory/hosts playbooks/install-noip2.yml --tags mydashboard
-#ansible-playbook -i inventory/hosts playbooks/create-users.yml --tags users,users_files
+ansible-playbook -i inventory/hosts playbooks/create-users.yml --tags users,users_files
 
