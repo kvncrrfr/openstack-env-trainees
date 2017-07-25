@@ -11,6 +11,11 @@ Installation de GIT
 
 #################################"
 
+sudo apt-get update
+sudo apt-get install -y software-properties-common
+sudo apt-add-repository -y ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install -y ansible
 sudo apt-get install -y git
 sudo apt-get install -y unzip gzip gcc g++ make
 
@@ -41,7 +46,6 @@ mkdir ~/repo
 git clone https://github.com/kvncrrfr/openstack-env-trainees.git ~/repo/ -b traineesv1
 cd ~/repo/ansible
 chmod 600 ~/.ssh/id_rsa
-cp ~/repo/ansible/playbooks/roles/users/files/public_keys/kevin ~/.ssh/authorized_keys
 
 #ansible-playbook -i 'localhost,' -c local playbooks/install-openldap.yml
 #ansible-playbook -i 'localhost,' -c local playbooks/install-gitlab.yml
